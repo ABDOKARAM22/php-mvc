@@ -17,7 +17,7 @@ class user extends model{
     }
 
     function login_user($email,$password){
-        $data = $this->db()->row("select id , passowrd FROM user WHERE email = :email ", ['email' => $email]);
+        $data = $this->db()->row("select id , password FROM user WHERE email = :email ", ['email' => $email]);
         return $data;
     }
 
